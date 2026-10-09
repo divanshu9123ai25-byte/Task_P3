@@ -1,52 +1,35 @@
-import ArticleCard from "./ArticleCard";
+import ArticleCard from './ArticleCard';
 
-const articles = [
-  {
-    id: 1,
-    title: "Getting Started with React",
-    description: "React basics",
-    author: "Divanshu Mittal",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500",
-  },
-  {
-    id: 2,
-    title: "Learn NodeJS",
-    description: "NodeJS basics",
-    author: "Divanshu Mittal",
-    image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=500",
-  },
-  {
-    id: 3,
-    title: "React Hooks",
-    description: "Learn React Hooks",
-    author: "Divanshu Mittal",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500",
-  },
+const projects = [
+{
+image: '/assets/project1.jpg',
+title: 'Student Management System',
+description:
+'A responsive website created to showcase my skills, projects, achievements, and interests in web development and programming.',
+},
+{
+image: '/assets/project2.jpg',
+title: 'Personal Website',
+description:
+'A modern and user-friendly website designed to highlight my technical skills, creative projects, and experience in technology.',
+},
 ];
 
 function Articles() {
-  return (
-    <section className="articles">
+return ( <section id="work" className="section"> <h2>My Projects</h2>
 
-      <h2>Featured Articles</h2>
 
-      <div className="article-list">
+  <div className="projects">
+    {projects.map((project) => (
+      <ArticleCard
+        key={project.title}
+        project={project}
+      />
+    ))}
+  </div>
+</section>
 
-        {articles.map((article) => (
-          <ArticleCard
-            key={article.id}
-            article={article}
-          />
-        ))}
-
-      </div>
-
-      <button className="see-button">
-        See all articles
-      </button>
-
-    </section>
-  );
+);
 }
 
 export default Articles;

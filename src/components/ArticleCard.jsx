@@ -1,22 +1,14 @@
-function ArticleCard({ article }) {
-  return (
-    <div className="article-card">
+function ArticleCard({ project }) {
+return ( <div className="project"> <img src={project.image} alt={project.title} />
 
-      <img src={article.image} alt={article.title} />
+  <h3>{project.title}</h3>
 
-      <h3>{article.title}</h3>
+  <p>{project.description}</p>
 
-      <p>{article.description}</p>
+  <a href="#contact">View Project</a>
+</div>
 
-      <hr />
-
-      <div className="article-info">
-        <span>⭐ 5</span>
-        <span>{article.author}</span>
-      </div>
-
-    </div>
-  );
+);
 }
 
 export default ArticleCard;

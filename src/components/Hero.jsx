@@ -1,19 +1,31 @@
 function Hero() {
   return (
-    <section className="hero">
+    <div>
+      <section className="banner">
+        <img src="/assets/banner.jpg" alt="Website banner" />
+        <div className="banner-text">
+          Hey, I'm Divanshu Mittal
+        </div>
+      </section>
 
-      <div className="hero-content">
-        <h1>Learn, Share & Connect</h1>
+      <section id="about" className="profile">
+        <img src="/assets/profile.jpg" alt="Profile photo" />
 
-        <p>
-          Explore useful articles, tutorials and videos
-          to improve your skills.
-        </p>
+        <div>
+          <h1>Divanshu Mittal</h1>
 
-        <button>Explore Now</button>
-      </div>
+          <p>
+            Hello! I am a Chitkara University student with a strong interest
+            in web development, programming, and modern technology.
+          </p>
 
-    </section>
+          <p>
+            I like creating creative websites and learning new programming
+            skills through practical projects.
+          </p>
+        </div>
+      </section>
+    </div>
   );
 }
 
